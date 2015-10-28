@@ -3,14 +3,17 @@ title: Sitting Room
 year: 2015
 layout: post
 images:
-  - sitting-room/tom-chung-sitting-room-01.jpg
-  - sitting-room/tom-chung-sitting-room-02.jpg
-  - sitting-room/tom-chung-sitting-room-03.jpg
-  - sitting-room/tom-chung-sitting-room-04.jpg
-  - sitting-room/tom-chung-sitting-room-06.jpg
-  - sitting-room/tom-chung-sitting-room-07.jpg
-  - sitting-room/tom-chung-sitting-room-08.jpg
-  - sitting-room/tom-chung-sitting-room-09.jpg
+  - image: sitting-room/tom-chung-sitting-room-01.jpg
+  - image: sitting-room/tom-chung-sitting-room-02.jpg
+  - image: sitting-room/tom-chung-sitting-room-03.jpg
+  - image: sitting-room/tom-chung-sitting-room-04.jpg
+  - image: sitting-room/tom-chung-sitting-room-05.jpg
+    size: half
+  - image: sitting-room/tom-chung-sitting-room-06.jpg
+    size: half
+  - image: sitting-room/tom-chung-sitting-room-07.jpg
+  - image: sitting-room/tom-chung-sitting-room-08.jpg
+  - image: sitting-room/tom-chung-sitting-room-09.jpg
 ---
 
 Sitting Room was an interdisciplinary exhibition of emerging Canadian Designers & Artists organized and curated for the 2015 Toronto Design Offsite festival.

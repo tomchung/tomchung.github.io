@@ -156,23 +156,26 @@ p.projects span:last-child::after {
 }
 
 .gallery {
-	padding: 20px;
+	padding: 20px 0 0 20px;
 	width: 100%;
 	position: relative;
 }
 
 .gallery .image {
+	width: 100%;
 	margin-bottom: 20px;
-}
-
-.gallery .image:last-child {
-	margin-bottom: 0;
+	padding-right: 20px;
+	float: left;
 }
 
 .gallery .image img {
 	display: block;
 	width: 100%;
 	height: auto;
+}
+
+.gallery .image.half {
+	width: 50%;
 }
 
 @media only screen and (max-width: 1440px) {

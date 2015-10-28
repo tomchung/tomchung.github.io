@@ -3,12 +3,12 @@ title: Umbra Shift
 year: 2013-2014
 layout: post
 images:
-  - umbra-shift/tom-chung-umbra-shift-11.jpg
-  - umbra-shift/tom-chung-umbra-shift-02.jpg
-  - umbra-shift/tom-chung-umbra-shift-03.jpg
-  - umbra-shift/tom-chung-umbra-shift-12.jpg
-  - umbra-shift/tom-chung-umbra-shift-13.jpg
-  - umbra-shift/tom-chung-umbra-shift-06.jpg
+  - image: umbra-shift/tom-chung-umbra-shift-11.jpg
+  - image: umbra-shift/tom-chung-umbra-shift-02.jpg
+  - image: umbra-shift/tom-chung-umbra-shift-03.jpg
+  - image: umbra-shift/tom-chung-umbra-shift-12.jpg
+  - image: umbra-shift/tom-chung-umbra-shift-13.jpg
+  - image: umbra-shift/tom-chung-umbra-shift-06.jpg
 ---
 
 Umbra Shift is a contemporary sub-brand of Umbra targeting influencing design stores and independent retailers. The brand was conceived and managed by Tom Chung for the first two releases including product selection, product design and art direction.
