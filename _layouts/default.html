@@ -1,0 +1,17 @@
+{% include header.html %}
+<div id="container">
+	<div id="content">
+		<div class="left-column centered">
+			<div class="content-wrap">
+			{% include projects.html %}
+			{{ content }}
+			</div>
+		</div>
+		<div class="right-column fixed">
+			<div class="cover-image" style="background-image: url('public/images/{{ page.cover }}');">
+<!-- 				<img src="public/images/{{ page.cover }}"> -->
+			</div>
+		</div>
+	</div>
+</div>
+{% include footer.html %}

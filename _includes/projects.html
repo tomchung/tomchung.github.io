@@ -1,0 +1,10 @@
+<h2>Selected Work</h2>			
+<p class="projects">
+	{% for node in site.posts %}
+	{% if page.url == node.url %}
+	<span class="project"><strike>{{ node.title }}</strike></span>
+	{% else %}
+	<span class="project"><a href="{{ node.url}}">{{ node.title }}</a></span>
+	{% endif %}
+	{% endfor %}
+</p>

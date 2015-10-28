@@ -1,0 +1,23 @@
+{% include header.html %}
+<div id="container">
+	<div id="content">
+		<div class="left-column">
+			<div class="sticky-column centered">
+				<div class="content-wrap">
+					{% include nav.html %}
+					<h2>{{ page.title }}, {{ page.year }}</h2>
+					{{ content }}
+					{% include projects.html %}
+				</div>
+			</div>
+		</div>
+		<div class="right-column">
+			<ul class="gallery">
+				{% for image in page.images %}
+				<li class="image"><img src="/public/images/{{ image }}"></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+{% include footer.html %}
