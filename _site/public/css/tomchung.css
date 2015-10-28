@@ -54,7 +54,8 @@ a:hover {
 	background-color: white;
 }
 
-.left-column.centered {
+.left-column.centered,
+.sticky-column {
 	padding: 0 50px;
 }
 
@@ -74,7 +75,6 @@ a:hover {
 }
 
 .sticky-column {
-	padding: 0 50px;
 	top: 0;
 	position: sticky;
 	position: -webkit-sticky;
