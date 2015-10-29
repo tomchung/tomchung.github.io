@@ -52,6 +52,8 @@ a:hover {
 	position: relative;
 	z-index: 1000;
 	background-color: white;
+	order: 1;
+	-webkit-order: 1;
 }
 
 .left-column.centered,
@@ -126,6 +128,7 @@ p.projects span:last-child::after {
 	width: 60vw;
 	background-color: #111;
 	position: relative;
+	order: 2;
 }
 
 .right-column .cover-image {
@@ -197,7 +200,7 @@ p.projects span:last-child::after {
 	
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
 
 	#content {
 		display: block;
@@ -217,6 +220,38 @@ p.projects span:last-child::after {
 		min-height: 0;
 	}
 
+}
+
+@media only screen and (max-width: 414px) {
+	
+	.left-column.centered,
+	.sticky-column {
+		padding: 0 36px;
+	}
+	
+	.content-wrap {
+		padding: 36px 0;
+	}
+	
+	.gallery {
+		padding: 10px 0 0 10px;
+	}
+	
+	.gallery .image {
+		margin-bottom: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.left-column.centered,
+	.sticky-column {
+		padding: 0 10px;
+	}
+	
+	.content-wrap {
+		padding: 36px 0 10px;
+	}
 }
 
 @supports not ((position: sticky) or (position: -webkit-sticky)) {
