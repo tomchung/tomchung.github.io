@@ -58,7 +58,7 @@ a:hover {
 
 .left-column.centered,
 .sticky-column {
-	padding: 0 50px;
+	padding: 0 48px;
 }
 
 .centered {
@@ -72,7 +72,7 @@ a:hover {
 
 .content-wrap {
 	max-width: 560px;
-	padding: 100px 0;
+	padding: 96px 0;
 	margin: 0 auto;
 }
 
@@ -185,7 +185,7 @@ p.projects span:last-child::after {
 @media only screen and (max-width: 1440px) {
 	
 	.content-wrap {
-		padding: 50px 0;
+		padding: 48px 0;
 	}
 	
 	nav {
@@ -217,7 +217,6 @@ p.projects span:last-child::after {
 	
 	.right-column {
 		width: 100%;
-		min-height: 0;
 	}
 
 }
