@@ -69,7 +69,7 @@ a:hover {
 }
 
 .content-wrap {
-	max-width: 480px;
+	max-width: 560px;
 	padding: 100px 0;
 	margin: 0 auto;
 }
@@ -87,12 +87,13 @@ a:hover {
 }
 
 nav {
-	margin-bottom: 100px;
+	margin-bottom: 44px;
+/* 	color: #aaa; */
 }
 
 nav li {
 	float: left;
-	margin-right: 10px;
+	margin-right: 1em;
 }
 
 h2 {
@@ -147,12 +148,6 @@ p.projects span:last-child::after {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	display: flex;
-	display: -webkit-flex;
-	flex-direction: column;
-	-webkit-flex-direction: column;
-	justify-content: center;
-	-webkit-justify-content: center;
 }
 
 .gallery {
@@ -178,6 +173,12 @@ p.projects span:last-child::after {
 	width: 50%;
 }
 
+@media only screen and (max-width: 1920px) {
+	.content-wrap {
+		max-width: 480px;
+	}
+}
+
 @media only screen and (max-width: 1440px) {
 	
 	.content-wrap {
@@ -185,7 +186,7 @@ p.projects span:last-child::after {
 	}
 	
 	nav {
-		margin-bottom: 50px;
+		margin-bottom: 36px;
 	}
 	
 	p {
@@ -197,9 +198,25 @@ p.projects span:last-child::after {
 }
 
 @media only screen and (max-width: 1024px) {
-/*
-	start single column work here
-*/
+
+	#content {
+		display: block;
+	}
+
+	.left-column,
+	.sticky-column {
+		width: 100%;
+	}	
+	
+	.right-column.fixed {
+		display: none;
+	}
+	
+	.right-column {
+		width: 100%;
+		min-height: 0;
+	}
+
 }
 
 @supports not ((position: sticky) or (position: -webkit-sticky)) {
@@ -211,18 +228,10 @@ p.projects span:last-child::after {
 }
 
 .cf:after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
-
-html[xmlns] .cf {
-	display: block;
-}
-
-* html .cf {
-	height: 1%;
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }

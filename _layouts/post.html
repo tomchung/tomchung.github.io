@@ -1,6 +1,13 @@
 {% include header.html %}
 <div id="container">
 	<div id="content">
+		<div class="right-column">
+			<ul class="gallery cf">
+				{% for image in page.images %}
+				<li class="image {{ image.size }}"><img src="/public/images/{{ image.image }}"></li>
+				{% endfor %}
+			</ul>
+		</div>
 		<div class="left-column">
 			<div class="sticky-column centered">
 				<div class="content-wrap">
@@ -10,13 +17,6 @@
 					{% include projects.html %}
 				</div>
 			</div>
-		</div>
-		<div class="right-column">
-			<ul class="gallery">
-				{% for image in page.images %}
-				<li class="image {{ image.size }}"><img src="/public/images/{{ image.image }}"></li>
-				{% endfor %}
-			</ul>
 		</div>
 	</div>
 </div>
