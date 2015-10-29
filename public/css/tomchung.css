@@ -1,4 +1,4 @@
-/* info: hi@andychung.me */
+/* website by hi@andychung.me */
 
 * {
 	margin: 0;
@@ -9,7 +9,6 @@
 
 body {
 	font-family: 'SF UI Text', sans-serif;
-	font-weight: light;
 	color: #111;
 	font-size: 14px;
 	line-height: 18px;
@@ -26,16 +25,18 @@ a:hover {
 	border-bottom: 1px solid;
 }
 
-#container {
-}
-
 #content {
 	background-color: white;
-	position: relative;
-	display: flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
 	display: -webkit-flex;
+	display: flex;
+	position: relative;
 	width: 100%;
 	-webkit-transition: opacity .5s ease;
+	-moz-transition: opacity .5s ease;
+	transition: opacity .5s ease;
 }
 
 #content *:not(html) { 
@@ -52,8 +53,11 @@ a:hover {
 	position: relative;
 	z-index: 1000;
 	background-color: white;
-	order: 1;
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	-ms-flex-order: 1;
 	-webkit-order: 1;
+	order: 1;
 }
 
 .left-column.centered,
@@ -62,12 +66,15 @@ a:hover {
 }
 
 .centered {
-	display: flex;
 	display: -webkit-flex;
-	flex-direction: column;
+	display: -moz-flex;
+	display: flex;
 	-webkit-flex-direction: column;
-	justify-content: center;
+	-moz-flex-direction: column;
+	flex-direction: column;
 	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center;
 }
 
 .content-wrap {
@@ -78,19 +85,18 @@ a:hover {
 
 .sticky-column {
 	top: 0;
-	position: sticky;
 	position: -webkit-sticky;
+	position: sticky;
 }
 
 .pinned {
 	position: fixed;
-	position: sticky;
 	position: -webkit-sticky;
+	position: sticky;
 }
 
 nav {
 	margin-bottom: 44px;
-/* 	color: #aaa; */
 }
 
 nav li {
@@ -128,22 +134,21 @@ p.projects span:last-child::after {
 	width: 60vw;
 	background-color: #111;
 	position: relative;
+	-webkit-box-ordinal-group: 2;
+	-moz-box-ordinal-group: 2;
+	-ms-flex-order: 2;
+	-webkit-order: 2;
 	order: 2;
 }
 
 .right-column .cover-image {
 	position: absolute;
-	top: 20px;
-	right: 20px;
-	left: 20px;
-	bottom: 20px;
+	top: 18px;
+	right: 18px;
+	left: 18px;
+	bottom: 18px;
 	background-size: cover;
 	background-position: center;
-}
-
-.right-column .cover-image img {
-	width: 100%;
-	height: auto;
 }
 
 .right-column.fixed {
@@ -154,15 +159,15 @@ p.projects span:last-child::after {
 }
 
 .gallery {
-	padding: 20px 0 0 20px;
+	padding: 18px 0 0 18px;
 	width: 100%;
 	position: relative;
 }
 
 .gallery .image {
 	width: 100%;
-	margin-bottom: 20px;
-	padding-right: 20px;
+	margin-bottom: 18px;
+	padding-right: 18px;
 	float: left;
 }
 
@@ -183,7 +188,6 @@ p.projects span:last-child::after {
 }
 
 @media only screen and (max-width: 1440px) {
-	
 	.content-wrap {
 		padding: 48px 0;
 	}
@@ -197,11 +201,9 @@ p.projects span:last-child::after {
 		line-height: 28px;
 		margin-bottom: 28px;
 	}
-	
 }
 
-@media only screen and (max-width: 1023px) {
-
+@media only screen and (max-width: 1020px) {
 	#content {
 		display: block;
 	}
@@ -218,11 +220,9 @@ p.projects span:last-child::after {
 	.right-column {
 		width: 100%;
 	}
-
 }
 
 @media only screen and (max-width: 414px) {
-	
 	.left-column.centered,
 	.sticky-column {
 		padding: 0 36px;
@@ -233,32 +233,30 @@ p.projects span:last-child::after {
 	}
 	
 	.gallery {
-		padding: 10px 0 0 10px;
+		padding: 12px 0 0 12px;
 	}
 	
 	.gallery .image {
-		margin-bottom: 10px;
-		padding-right: 10px;
+		margin-bottom: 12px;
+		padding-right: 12px;
 	}
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 320px) {	
 	.left-column.centered,
 	.sticky-column {
-		padding: 0 10px;
+		padding: 0 12px;
 	}
 	
 	.content-wrap {
-		padding: 36px 0 10px;
+		padding: 36px 0 12px;
 	}
 }
 
 @supports not ((position: sticky) or (position: -webkit-sticky)) {
-
 	#content *:not(html) { 
 		-webkit-transform: inherit;
 	}
-
 }
 
 .cf:after {
