@@ -4,11 +4,11 @@ year: 2013-2014
 layout: post
 images:
   - image: umbra-shift/tom-chung-umbra-shift-06.jpg
-  - image: umbra-shift/tom-chung-umbra-shift-01.jpg
-  - image: umbra-shift/tom-chung-umbra-shift-03.jpg
   - image: umbra-shift/tom-chung-umbra-shift-02.jpg
   - image: umbra-shift/tom-chung-umbra-shift-11.jpg
   - image: umbra-shift/tom-chung-umbra-shift-05.jpg
+  - image: umbra-shift/tom-chung-umbra-shift-01.jpg
+  - image: umbra-shift/tom-chung-umbra-shift-03.jpg
   - image: umbra-shift/tom-chung-umbra-shift-12.jpg
   - image: umbra-shift/tom-chung-umbra-shift-13.jpg
 ---
