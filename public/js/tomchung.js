@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	
+	size();
 	reveal();
 	
 	$(window).bind('load resize scroll', function() {
@@ -18,6 +18,7 @@ $(document).ready(function() {
 		var State = History.getState();
 		$.get(State.url, function(data){
 			document.title = data.match(/<title>(.*?)<\/title>/)[1];
+			size();
 			setTimeout(function() {
 				$('#content').html($(data).find('#content').children());
 				reveal();	
@@ -25,7 +26,6 @@ $(document).ready(function() {
 			}, 500);
 		});
 	});
-	
 });
 
 function getImageSize(img, callback) {
@@ -41,13 +41,16 @@ function getImageSize(img, callback) {
     }, 30);
 }
 
-function reveal() {
+function size() {
 	$('.gallery img').each(function() {
 		var img = $(this);
 		getImageSize($(this), function(width, height) {
 		    img.attr({'height': height, 'width': width });
 		});
 	});
+}
+
+function reveal() {
 	
 	window.scrollTo(0, 0);
 	

@@ -4,11 +4,17 @@ year: 2011
 layout: post
 images:
   - image: fjallbjork-diamants/tom-chung-fjallbjork-diamants-01.jpg
+    size: full
   - image: fjallbjork-diamants/tom-chung-fjallbjork-diamants-02.jpg
+    size: full
   - image: fjallbjork-diamants/tom-chung-fjallbjork-diamants-03.jpg
+    size: full
   - image: fjallbjork-diamants/tom-chung-fjallbjork-diamants-04.jpg
+    size: full
   - image: fjallbjork-diamants/tom-chung-fjallbjork-diamants-05.jpg
+    size: full
   - image: fjallbjork-diamants/tom-chung-fjallbjork-diamants-06.jpg
+    size: full
 ---
 
 With the simple action of cutting, the Cabinet Maker crafts a precious object out of the most common and traditional Swedish material; Birch wood offcuts.
