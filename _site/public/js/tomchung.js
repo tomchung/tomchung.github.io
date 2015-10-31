@@ -48,15 +48,13 @@ function reveal() {
 	
 	window.scrollTo(0, 0);
 	
-	setTimeout(function() {
-		$('.gallery').imagesLoaded().progress(function(instance, image) {
-			$(image.img).css({ 'opacity' : 1 });
-		});
-		
-		$('.cover-image').imagesLoaded( { background: true }, function() {
-			$('.cover-image').css({ 'opacity' : 1 });
-		});
-	}, 100);
+	$('.gallery').imagesLoaded().progress(function(instance, image) {
+		$(image.img).css({ 'opacity' : 1 });
+	});
+	
+	$('.cover-image').imagesLoaded( { background: true }, function() {
+		$('.cover-image').css({ 'opacity' : 1 });
+	});
 	
 	setTimeout(function() {
 		$('#content').css({ 'opacity' : 1 });
