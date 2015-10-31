@@ -277,6 +277,11 @@ p.projects span:last-child::after {
 		-moz-transform: inherit;
 		transform: inherit;
 	}
+	
+	.gallery img {
+		-webkit-transform: translateZ(0);
+		-webkit-transform-style: preserve-3d;
+	}
 }
 
 .cf:after {

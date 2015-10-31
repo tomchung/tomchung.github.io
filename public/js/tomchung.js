@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	size();
 	reveal();
 	
 	$(window).bind('load resize scroll', function() {
@@ -18,7 +17,6 @@ $(document).ready(function() {
 		var State = History.getState();
 		$.get(State.url, function(data){
 			document.title = data.match(/<title>(.*?)<\/title>/)[1];
-			size();
 			setTimeout(function() {
 				$('#content').html($(data).find('#content').children());
 				reveal();	
@@ -30,7 +28,6 @@ $(document).ready(function() {
 
 function getImageSize(img, callback) {
     var $img = $(img);
-
     var wait = setInterval(function() {
         var w = $img[0].naturalWidth,
             h = $img[0].naturalHeight;
@@ -41,26 +38,25 @@ function getImageSize(img, callback) {
     }, 30);
 }
 
-function size() {
+function reveal() {
 	$('.gallery img').each(function() {
 		var img = $(this);
 		getImageSize($(this), function(width, height) {
 		    img.attr({'height': height, 'width': width });
 		});
 	});
-}
-
-function reveal() {
 	
 	window.scrollTo(0, 0);
 	
-	$('.gallery').imagesLoaded().progress(function(instance, image) {
-		$(image.img).css({ 'opacity' : 1 });
-	});
-	
-	$('.cover-image').imagesLoaded( { background: true }, function() {
-		$('.cover-image').css({ 'opacity' : 1 });
-	});
+	setTimeout(function() {
+		$('.gallery').imagesLoaded().progress(function(instance, image) {
+			$(image.img).css({ 'opacity' : 1 });
+		});
+		
+		$('.cover-image').imagesLoaded( { background: true }, function() {
+			$('.cover-image').css({ 'opacity' : 1 });
+		});
+	}, 100);
 	
 	setTimeout(function() {
 		$('#content').css({ 'opacity' : 1 });
