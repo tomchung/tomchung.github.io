@@ -20,9 +20,9 @@ images:
   - image: working-title/tom-chung-working-title-08.jpg
     size: full
   - image: working-title/tom-chung-working-title-09.jpg
-    size: full
+    size: half
   - image: working-title/tom-chung-working-title-10.jpg
-    size: full
+    size: half
   - image: working-title/tom-chung-working-title-11.jpg
     size: full
   - image: working-title/tom-chung-working-title-14.jpg
