@@ -184,15 +184,14 @@ p.projects span:last-child::after {
 	margin-bottom: 18px;
 	padding-right: 18px;
 	float: left;
-	opacity: 0;
-	-webkit-transition: opacity .5s ease;
-	-moz-transition: opacity .5s ease;
 }
 
 .gallery .image img {
-	display: block;
 	width: 100%;
 	height: auto;
+	opacity: 0;
+	-webkit-transition: opacity .5s ease;
+	-moz-transition: opacity .5s ease;
 }
 
 .gallery .image.half {

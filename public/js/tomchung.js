@@ -2,7 +2,10 @@ $(document).ready(function() {
 	
 	reveal();
 	
-	// history js logic
+	$(window).bind('load resize scroll', function() {
+		pin();
+	});
+	
 	var siteUrl = 'http://'+(document.location.hostname||document.location.host);
 	
 	$(document).delegate('a[href^="/"],a[href^="'+siteUrl+'"]', "click tap", function(e) {
@@ -23,20 +26,14 @@ $(document).ready(function() {
 		});
 	});
 	
-	$(window).bind('load resize scroll', function() {
-		pin();
-	});
-	
 });
 
 function reveal() {
 	window.scrollTo(0, 0);
-	
-	$('.gallery img').each(function() {
-		var image = $(this);
-		image.imagesLoaded().always( function( instance ) { 
-			image.closest('.image').css({ 'opacity' : 1 });
-		});
+
+	var imgLoad = imagesLoaded('.gallery');
+	imgLoad.on( 'progress', function( instance, image ) {
+	    $(image.img).css({ 'opacity' : 1 });
 	});
 	
 	$('.cover-image').imagesLoaded( { background: true }, function() {
@@ -46,6 +43,15 @@ function reveal() {
 	setTimeout(function() {
 		$('#content').css({ 'opacity' : 1 });
 	}, 50);
+	
+/*
+	$('.gallery img').each(function() {
+		var image = $(this);
+		image.imagesLoaded().always( function( instance ) { 
+			image.closest('.image').css({ 'opacity' : 1 });
+		});
+	});
+*/
 
 /*
 	$('.content').imagesLoaded().always( function( instance ) {
