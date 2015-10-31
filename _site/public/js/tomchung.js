@@ -28,10 +28,30 @@ $(document).ready(function() {
 	
 });
 
+function getImageSize(img, callback) {
+    var $img = $(img);
+
+    var wait = setInterval(function() {
+        var w = $img[0].naturalWidth,
+            h = $img[0].naturalHeight;
+        if (w && h) {
+            clearInterval(wait);
+            callback.apply(this, [w, h]);
+        }
+    }, 30);
+}
+
 function reveal() {
+	$('.gallery img').each(function() {
+		var img = $(this);
+		getImageSize($(this), function(width, height) {
+		    img.attr({'height': height, 'width': width });
+		});
+	});
+	
 	window.scrollTo(0, 0);
 	
-	$('.gallery').imagesLoaded().progress( function( instance, image ) {
+	$('.gallery').imagesLoaded().progress(function(instance, image) {
 		$(image.img).css({ 'opacity' : 1 });
 	});
 	
@@ -42,17 +62,10 @@ function reveal() {
 	setTimeout(function() {
 		$('#content').css({ 'opacity' : 1 });
 	}, 50);
-
-/*
-	$('.content').imagesLoaded().always( function( instance ) {
-		$('#spinner').css({ 'display' : 'none' });  
-	});
-*/
 }
 
 function hide() {
 	$('#content').css({ 'opacity' : 0 });
-	// $('#spinner').css({ 'display' : 'block' });  
 }
 
 function pin() {
