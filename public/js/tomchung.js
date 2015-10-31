@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	
+	reveal();
+	
 	// history js logic
 	var siteUrl = 'http://'+(document.location.hostname||document.location.host);
 	
@@ -30,18 +32,22 @@ $(document).ready(function() {
 function reveal() {
 	window.scrollTo(0, 0);
 	
+	$('.gallery img').each(function() {
+		var image = $(this);
+		image.imagesLoaded().always( function( instance ) { 
+			image.closest('.image').css({ 'opacity' : 1 });
+		});
+	});
+	
+	$('.cover-image').imagesLoaded( { background: true }, function() {
+		$('.cover-image').css({ 'opacity' : 1 });
+	});
+	
 	setTimeout(function() {
 		$('#content').css({ 'opacity' : 1 });
 	}, 50);
 
 /*
-	$('.content img').each(function() {
-		var image = $(this);
-		image.imagesLoaded().always( function( instance ) { 
-			image.closest('.fade-image').css({ 'opacity' : 1 });
-		});
-	});
-	
 	$('.content').imagesLoaded().always( function( instance ) {
 		$('#spinner').css({ 'display' : 'none' });  
 	});

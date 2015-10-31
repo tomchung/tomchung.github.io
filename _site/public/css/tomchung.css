@@ -161,6 +161,8 @@ p.projects span:last-child::after {
 	bottom: 18px;
 	background-size: cover;
 	background-position: center;
+	opacity: 0;
+	-webkit-transition: opacity .2s ease;
 }
 
 .right-column.fixed {
@@ -181,6 +183,8 @@ p.projects span:last-child::after {
 	margin-bottom: 18px;
 	padding-right: 18px;
 	float: left;
+	opacity: 0;
+	-webkit-transition: opacity .2s ease;
 }
 
 .gallery .image img {
