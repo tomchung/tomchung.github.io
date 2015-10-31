@@ -4,7 +4,7 @@
 		<div class="right-column">
 			<ul class="gallery cf">
 				{% for image in page.images %}
-				<li class="image {{ image.size }}"><img src="/public/images/{{ image.image }}"></li>
+				<li class="image {{ image.size }}"><div class="image-wrap"><img src="/public/images/{{ image.image }}"></div></li>
 				{% endfor %}
 			</ul>
 		</div>

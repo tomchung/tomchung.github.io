@@ -187,7 +187,12 @@ p.projects span:last-child::after {
 	float: left;
 }
 
+.gallery .image-wrap {
+	position: relative;
+}
+
 .gallery .image img {
+	position: absolute;
 	display: block;
 	width: 100%;
 	height: auto;

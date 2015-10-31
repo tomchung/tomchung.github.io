@@ -42,7 +42,9 @@ function reveal() {
 	$('.gallery img').each(function() {
 		var img = $(this);
 		getImageSize($(this), function(width, height) {
-		    img.attr({'height': height, 'width': width });
+		    // img.attr({'height': height, 'width': width });
+		    var ratio = (height / width) * 100;
+		    img.parent().css({ 'padding-bottom' : ratio + '%' })
 		});
 	});
 	
