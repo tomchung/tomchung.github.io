@@ -32,7 +32,7 @@ function reveal() {
 	window.scrollTo(0, 0);
 
 	var imgLoad = imagesLoaded('.gallery');
-	imgLoad.on( 'progress', function( instance, image ) {
+	imgLoad.on( 'progress', function(instance, image) {
 	    $(image.img).css({ 'opacity' : 1 });
 	});
 	

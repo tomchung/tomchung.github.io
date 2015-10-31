@@ -63,7 +63,6 @@ a:hover {
 
 .left-column {
 	position: relative;
-	z-index: 1000;
 	background-color: white;
 	-webkit-box-ordinal-group: 1;
 	-moz-box-ordinal-group: 1;
