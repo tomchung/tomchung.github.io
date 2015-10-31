@@ -189,7 +189,6 @@ p.projects span:last-child::after {
 
 .gallery .image img {
 	display: block;
-	position: absolute;
 	width: 100%;
 	height: auto;
 	opacity: 0;
