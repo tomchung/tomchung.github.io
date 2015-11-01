@@ -3,8 +3,8 @@ title: Sitting Room
 year: 2015
 layout: post
 tags:
-  - Exhibition Design
-  - Curation
+  - Exhibition design
+  - curation
 images:
   - image: sitting-room/tom-chung-sitting-room-01.jpg
     size: full

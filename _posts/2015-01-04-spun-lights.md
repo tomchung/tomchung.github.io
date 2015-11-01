@@ -3,7 +3,7 @@ title: Spun Lights
 year: 2015
 layout: post
 tags:
-  - Product Design
+  - Product design
 images:
   - image: spun-lights/tom-chung-spun-lights-01.jpg
     size: full

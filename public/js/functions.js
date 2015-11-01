@@ -1,5 +1,25 @@
+function getImageSize(img, callback) {
+    var $img = $(img);
+
+    var wait = setInterval(function() {
+        var w = $img[0].naturalWidth,
+            h = $img[0].naturalHeight;
+        if (w && h) {
+            clearInterval(wait);
+            callback.apply(this, [w, h]);
+        }
+    }, 30);
+}
+
 function reveal() {	
 	window.scrollTo(0, 0);
+	
+	$('.gallery img').each(function() {
+		var img = $(this);
+		getImageSize($(this), function(width, height) {
+		    img.attr({'height': height, 'width': width });
+		});
+	});
 	
 	$('.gallery').imagesLoaded().progress(function(instance, image) {
 		$(image.img).css({ 'opacity' : 1 });
