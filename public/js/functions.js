@@ -1,25 +1,18 @@
-function getImageSize(img, callback) {
-    var $img = $(img);
-
-    var wait = setInterval(function() {
-        var w = $img[0].naturalWidth,
-            h = $img[0].naturalHeight;
-        if (w && h) {
-            clearInterval(wait);
-            callback.apply(this, [w, h]);
-        }
-    }, 30);
+function randomize() {
+	items = [
+	    { image : 'umbra-shift/tom-chung-umbra-shift-11.jpg', link : 'umbra-shift' },
+	    { image : 'spun-lights/tom-chung-spun-lights-01.jpg', link : 'spun-lights' },
+	    { image : 'working-title/tom-chung-working-title-05.jpg', link : 'working-title' }
+	]
+	var item = items[Math.floor(Math.random()*items.length)];
+	$('.cover-image').css({ 'background-image' : 'url("public/images/' + item.image + '")'});
+	$('.hero-link').attr({'href' : '/projects/' + item.link });
 }
 
 function reveal() {	
 	window.scrollTo(0, 0);
 	
-	$('.gallery img').each(function() {
-		var img = $(this);
-		getImageSize($(this), function(width, height) {
-		    img.attr({'height': height, 'width': width });
-		});
-	});
+	randomize();
 	
 	$('.gallery').imagesLoaded().progress(function(instance, image) {
 		$(image.img).css({ 'opacity' : 1 });

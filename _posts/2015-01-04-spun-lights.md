@@ -5,7 +5,7 @@ layout: post
 tags:
   - Product design
 images:
-  - image: spun-lights/tom-chung-spun-lights-01.jpg
+  - image: spun-lights/tom-chung-spun-lights-05.jpg
     size: full
   - image: spun-lights/tom-chung-spun-lights-02.jpg
     size: full
@@ -13,7 +13,7 @@ images:
     size: full
   - image: spun-lights/tom-chung-spun-lights-04.jpg
     size: full
-  - image: spun-lights/tom-chung-spun-lights-05.jpg
+  - image: spun-lights/tom-chung-spun-lights-01.jpg
     size: full
   - image: spun-lights/tom-chung-spun-lights-06.jpg
     size: full
