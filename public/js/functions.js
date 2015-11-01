@@ -2,7 +2,7 @@ function randomize() {
 	items = [
 	    { image : 'umbra-shift/tom-chung-umbra-shift-11.jpg', link : 'umbra-shift' },
 	    { image : 'spun-lights/tom-chung-spun-lights-01.jpg', link : 'spun-lights' },
-	    { image : 'working-title/tom-chung-working-title-05.jpg', link : 'working-title' }
+	    { image : 'working-title/tom-chung-working-title-10.jpg', link : 'working-title' }
 	]
 	var item = items[Math.floor(Math.random()*items.length)];
 	$('.cover-image').css({ 'background-image' : 'url("public/images/' + item.image + '")'});
