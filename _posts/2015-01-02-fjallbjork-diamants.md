@@ -2,6 +2,8 @@
 title: Fj&auml;llbj&ouml;rk Diamants
 year: 2011
 layout: post
+tags:
+  - Product Design
 images:
   - image: fjallbjork-diamants/tom-chung-fjallbjork-diamants-01.jpg
     size: full

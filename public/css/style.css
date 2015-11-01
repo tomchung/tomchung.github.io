@@ -34,15 +34,15 @@ a {
 	text-decoration: none;
 }
 
-a:active {
+.left-column a:active {
 	opacity: .3;
 }
 
-.no-touch a:hover {
+.no-touch .left-column a:hover {
 	border-bottom: 1px solid;
 } 
 
-.no-touch a:active {
+.no-touch .left-column a:active {
 	opacity: 1;
 }
 
@@ -131,6 +131,26 @@ h2 {
 	font-size: 13px;
 	line-height: 16px;
 	margin-bottom: 8px;
+}
+
+h2.project-title {
+	margin-bottom: 0;
+}
+
+ul.tags {
+	margin-bottom: 8px;
+}
+
+ul.tags li {
+	display: inline;
+}
+
+ul.tags li::after {
+	content: ', '
+}
+
+ul.tags li:last-child::after {
+	content: '';
 }
 
 p {

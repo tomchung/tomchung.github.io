@@ -2,6 +2,8 @@
 title: Working Title
 year: 2015
 layout: post
+tags:
+  - Interior Design
 images:
   - image: working-title/tom-chung-working-title-01.jpg
     size: full

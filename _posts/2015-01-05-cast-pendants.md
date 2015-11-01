@@ -2,6 +2,8 @@
 title: Cast Pendants
 year: 2014
 layout: post
+tags:
+  - Product Design
 images:
   - image: cast-pendants/tom-chung-cast-pendants-01.jpg
     size: full
