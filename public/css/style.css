@@ -217,7 +217,7 @@ p.projects span:last-child::after {
 	float: left;
 }
 
-.galler .image .image-wrap {
+.gallery .image .image-wrap {
 	background-color: #111;
 	position: relative;
 	-webkit-transition: background-color .2s ease;
