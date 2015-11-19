@@ -36,7 +36,7 @@ function getImageSize(img, callback) {
 }
 
 function size() {
-/*
+
 	var count = $('.gallery img').length;
 	$('.gallery img').each(function(i) {
 		var img = $(this);
@@ -47,7 +47,7 @@ function size() {
 		if (i+1 === count) {
 			setTimeout(function() {
 				$('.image-wrap').css({ 'background-color' : '#222' });
-			}, 50);
+			}, 100);
 			setTimeout(function() {
 				$('.gallery').imagesLoaded().progress(function(instance, image) {
 					$(image.img).css({ 'opacity' : 1 });
@@ -55,7 +55,8 @@ function size() {
 			}, 800);
 		}
 	});
-*/
+
+/*
 	$('.gallery img').each(function(i) {
 		var img = $(this);
 		getImageSize(img, function(width, height) {
@@ -74,6 +75,7 @@ function size() {
 			});
 		}, 800);
 	});
+*/
 }
 
 function hide() {
