@@ -36,6 +36,26 @@ function getImageSize(img, callback) {
 }
 
 function size() {
+/*
+	var count = $('.gallery img').length;
+	$('.gallery img').each(function(i) {
+		var img = $(this);
+		getImageSize(img, function(width, height) {
+		    var ratio = (height / width) * 100;
+		    img.parent().css({ 'padding-bottom' : ratio + '%' });
+		});
+		if (i+1 === count) {
+			setTimeout(function() {
+				$('.image-wrap').css({ 'background-color' : '#222' });
+			}, 50);
+			setTimeout(function() {
+				$('.gallery').imagesLoaded().progress(function(instance, image) {
+					$(image.img).css({ 'opacity' : 1 });
+				});
+			}, 800);
+		}
+	});
+*/
 	$('.gallery img').each(function(i) {
 		var img = $(this);
 		getImageSize(img, function(width, height) {
@@ -45,12 +65,14 @@ function size() {
 	});
 	
 	$('.gallery img').promise().done(function() {
-		$('.image-wrap').css({ 'background-color' : '#222' });
+		setTimeout(function() {
+			$('.image-wrap').css({ 'background-color' : '#222' });
+		}, 50);
 		setTimeout(function() {
 			$('.gallery').imagesLoaded().progress(function(instance, image) {
 				$(image.img).css({ 'opacity' : 1 });
 			});
-		}, 500);
+		}, 800);
 	});
 }
 
