@@ -41,8 +41,12 @@ function size() {
 		getImageSize(img, function(width, height) {
 		    var ratio = (height / width) * 100;
 		    img.parent().css({ 'padding-bottom' : ratio + '%' });
-		});
+		});	
 	}).promise().done(function() {
+		setTimeout(function() {
+			$('.image-wrap').css({ 'background-color' : '#222' });
+		}, 200);
+/*
 		setTimeout(function() {
 			$('.image-wrap').css({ 'background-color' : '#222' });
 		}, 100);
@@ -50,7 +54,8 @@ function size() {
 			$('.gallery').imagesLoaded().progress(function(instance, image) {
 				$(image.img).css({ 'opacity' : 1 });
 			});
-		}, 800);
+		}, 500);
+*/
 	});
 }
 
