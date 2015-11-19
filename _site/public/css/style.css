@@ -217,19 +217,11 @@ p.projects span:last-child::after {
 	float: left;
 }
 
-.gallery .image-wrap {
-	background-color: #111;
-	position: relative;
-	-webkit-transition: background-color .2s ease;
-	-moz-transition: background-color .2s ease;
-}
-
 .gallery .image img {
 	display: block;
 	width: 100%;
 	height: auto;
 	opacity: 0;
-	position: absolute;
 	-webkit-transition: opacity .5s ease;
 	-moz-transition: opacity .5s ease;
 }
