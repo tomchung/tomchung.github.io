@@ -219,6 +219,7 @@ p.projects span:last-child::after {
 
 .galler .image .image-wrap {
 	background-color: #111;
+	position: relative;
 	-webkit-transition: background-color .2s ease;
 	-moz-transition: background-color .2s ease;
 }
