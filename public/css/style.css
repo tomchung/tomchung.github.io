@@ -217,7 +217,13 @@ p.projects span:last-child::after {
 	float: left;
 }
 
-.gallery .image img {
+.gallery .image .placeholder {
+	position: relative;
+	background-color: #222;
+}
+
+.gallery .image .placeholder img {
+	position: absolute;
 	display: block;
 	width: 100%;
 	height: auto;
