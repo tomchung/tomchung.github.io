@@ -196,6 +196,7 @@ p.projects span:last-child::after {
 	opacity: 0;
 	-webkit-transition: opacity .5s ease;
 	-moz-transition: opacity .5s ease;
+	transition: opacity .5s ease;
 }
 
 .right-column.fixed {
@@ -230,6 +231,7 @@ p.projects span:last-child::after {
 	opacity: 0;
 	-webkit-transition: opacity .5s ease;
 	-moz-transition: opacity .5s ease;
+	transition: opacity .5s ease;
 }
 
 .gallery .image.half {
