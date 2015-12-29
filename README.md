@@ -1,6 +1,9 @@
 ### Tom Chung Studio
 A static portfolio site for Tom Chung Studio.
 
+### Sync your project
+Open the github app and sync both the `tomchung.github.io` and `tomchung.net` projects to make sure you have the latest version on you computer.
+
 ### Run the website locally
 Open terminal.app and type the following two commands:
 
