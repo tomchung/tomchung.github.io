@@ -4,8 +4,8 @@ A static portfolio site for Tom Chung Studio.
 ### Run the website locally
 Open terminal.app and type the following two commands:
 
-`cd ~/Documents/tomchung.github.io-source
-jekyll serve --skip-initial-build --watch`
+`cd ~/Documents/tomchung.github.io-source`
+`jekyll serve --skip-initial-build --watch`
 
 Navigate to `localhost:4000` in your web browser. The website is now running locally.
 
@@ -14,10 +14,10 @@ Open the `_Posts` folder and duplicate any of the projects. The date prepended t
 
 Your file has the following fields you need to edit:
 
-`title` - Defines the title of your project
-`year` - Defines the year the project was completed
-`layout` - Keep this as ‘Post’
-`tags` - This used to be typologies but is no longer used on the site
+`title` - Defines the title of your project.
+`year` - Defines the year the project was completed.
+`layout` - Keep this as ‘Post’.
+`tags` - This used to be typologies but is no longer used on the site.
 `images` - Defines the source of the images. Place images in the `public/images` folder.
 `size` - Specifies whether an image is displayed full width or two up. Can be defined as `full` or `half`. Half size images must occur two in a row and have the same pixel dimensions to render properly.
 
