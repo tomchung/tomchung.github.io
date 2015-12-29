@@ -4,14 +4,14 @@ A static portfolio site for Tom Chung Studio.
 ### Run the website locally
 Open terminal.app and type the following two commands:
 
-`cd ~/Documents/tomchung.github.io-source`
+`cd ~/Documents/Website/tomchung.github.io-source`
 
 `jekyll serve --skip-initial-build --watch`
 
 Navigate to `localhost:4000` in your web browser. The website is now running locally.
 
 ### Creating a new project
-Open the `_Posts` folder and duplicate any of the projects. The date prepended to the filename dictates the order in which the projects appear on the website menu, and the name of the file dictates the URL.
+Open the `_Posts` folder and duplicate and rename any of the markdown files to your liking. The date prepended to the filename dictates the order in which the projects appear on the website menu, and the name of the file dictates the URL. This new file represents the content of your new project.
 
 Your file has the following fields you need to edit:
 
