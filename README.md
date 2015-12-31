@@ -29,7 +29,7 @@ Your file has the following fields you need to edit:
 
 Once you’ve saved your file your changes will be live at `localhost:4000` in your web browser. Once you’re happy with your changes you’re ready to publish them.
 
-### 4. Publishing your changes
+### 4. Publish your changes
 Once you’re finished making your changes it’s time to publish them. Open the Github app and note that you have changes to both the `tomchung.github.io` and `tomchung.net` projects. Type a ‘summary’ of the changes you’ve made and hit the ‘commit to master’ button.
 
 Lastly hit the ‘sync’ button in the top right, your changes will now be live on http://tomchung.net.
