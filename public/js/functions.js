@@ -3,6 +3,8 @@ function randomize() {
 	    { image : 'umbra-shift/tom-chung-umbra-shift-11.jpg', link : 'umbra-shift' },
 	    { image : 'spun-lights/tom-chung-spun-lights-01.jpg', link : 'spun-lights' },
 	    { image : 'working-title/tom-chung-working-title-10.jpg', link : 'working-title' }
+	    { image : '68-claremont/tom-chung-68-claremont-08.jpg', link : '68-claremont' }
+
 	]
 	var item = items[Math.floor(Math.random()*items.length)];
 	$('.cover-image').css({ 'background-image' : 'url("public/images/' + item.image + '")'});
