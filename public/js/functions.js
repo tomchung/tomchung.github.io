@@ -1,6 +1,5 @@
 function randomize() {
 	items = [
-	    { image : 'umbra-shift/tom-chung-umbra-shift-11.jpg', link : 'umbra-shift' },
 	    { image : 'spun-sconce/tom-chung-sc-01.jpg', link : 'spun-sconce' },
 	    { image : 'working-title/tom-chung-working-title-10.jpg', link : 'working-title' }
 	    { image : '68-claremont/tom-chung-68-claremont-08.jpg', link : '68-claremont' }
