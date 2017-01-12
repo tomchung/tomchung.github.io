@@ -2,7 +2,7 @@ function randomize() {
 	items = [
 	    { image : 'spun-sconce/tom-chung-sc-01.jpg', link : 'spun-sconce' },
 	    { image : 'working-title/tom-chung-working-title-10.jpg', link : 'working-title' },
-	    { image : '68-claremont/tom-chung-68-claremont-07.jpg', link : '68-claremont' },
+	    { image : 'cast-pendants/tom-chung-cast-pendants-02.jpg', link : 'cast-pendants' },
 	    { image : 'laser-cut-stools/tom-chung-laser-cut-stools-01.jpg', link : 'laser-cut-stools' }
 	];
 	var item = items[Math.floor(Math.random()*items.length)];
