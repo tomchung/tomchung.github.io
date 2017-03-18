@@ -261,14 +261,6 @@ p.projects span:last-child::after {
 	width: 50%;
 }
 
-.catalog-wrap {
-	width: 100%;
-	height: 100vh;
-	padding: 24px;
-	background-color: #111;
-	color: #fff;
-}
-
 @media only screen and (max-width: 1920px) {
 	.content-wrap {
 		max-width: 480px;

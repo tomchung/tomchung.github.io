@@ -76,7 +76,6 @@ $(document).ready(function() {
 			setTimeout(function() {
 				$('#content').html($(data).find('#content').children());
 				reveal();
-				size();	
 				pin();			
 			}, 500);
 		});
