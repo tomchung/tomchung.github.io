@@ -246,7 +246,8 @@ p.projects span:last-child::after {
 	background-color: #222;
 }
 
-.gallery .image .placeholder img {
+.gallery .image .placeholder img,
+.gallery .image .placeholder video {
 	position: absolute;
 	display: block;
 	width: 100%;
@@ -259,6 +260,10 @@ p.projects span:last-child::after {
 
 .gallery .image.half {
 	width: 50%;
+}
+
+.gallery .image .placeholder.video {
+	padding-bottom: 56.25%;
 }
 
 @media only screen and (max-width: 1920px) {

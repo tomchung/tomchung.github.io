@@ -28,16 +28,20 @@ function reveal() {
 	}, 50);
 }
 
+function showVideo() {
+	$(event.target).css({ 'opacity' : 1 });
+}
+
 function hide() {
 	$('#content').css({ 'opacity' : 0 });
 }
 
 function pin() {
-	var stickyColumn   = $('.sticky-column');
-	var contentHeight  = stickyColumn.outerHeight();
-	var windowHeight   = $(window).height();
-	var windowWidth    = $(window).width();
-	var scrollPosition = $(window).scrollTop();
+	var stickyColumn   = $('.sticky-column'),
+		contentHeight  = stickyColumn.outerHeight(),
+		windowHeight   = $(window).height(),
+		windowWidth    = $(window).width(),
+		scrollPosition = $(window).scrollTop();
 	
 	if ((contentHeight > windowHeight) && (windowWidth > 1020)) {
 		stickyColumn.css({ 'top' : -(contentHeight - windowHeight) });
