@@ -10,26 +10,28 @@ function randomize() {
 	$('.hero-link').attr({'href' : '/projects/' + item.link });
 }
 
-function reveal() {	
+function reveal() {
 	window.scrollTo(0, 0);
-	
+
 	randomize();
-	
+
 	$(".gallery").imagesLoaded().progress(function(t, n) {
         $(n.img).css({ 'opacity' : 1 })
     });
-	
+
 	$('.cover-image').imagesLoaded({ background: true }, function() {
 		$('.cover-image').css({ 'opacity' : 1 });
 	});
-	
+
 	setTimeout(function() {
 		$('#content').css({ 'opacity' : 1 });
 	}, 50);
 }
 
-function showVideo() {
-	$(event.target).css({ 'opacity' : 1 });
+function showVideo(e) {
+	e = e || window.event;
+    var target = e.target || e.srcElement;
+	$(target).css({ 'opacity' : 1 });
 }
 
 function hide() {
@@ -42,13 +44,13 @@ function pin() {
 		windowHeight   = $(window).height(),
 		windowWidth    = $(window).width(),
 		scrollPosition = $(window).scrollTop();
-	
+
 	if ((contentHeight > windowHeight) && (windowWidth > 1020)) {
 		stickyColumn.css({ 'top' : -(contentHeight - windowHeight) });
 	} else {
 		stickyColumn.css({ 'top' : '' });
 	}
-	
+
 	if (scrollPosition > (contentHeight - windowHeight)) {
 		stickyColumn.addClass('pinned');
 	} else {
@@ -58,15 +60,15 @@ function pin() {
 
 $(document).ready(function() {
 	reveal();
-	
+
 	document.addEventListener('touchstart', function(){}, true);
-	
+
 	$(window).bind('load resize scroll', function() {
 		pin();
 	});
-	
+
 	var siteUrl = 'http://'+(document.location.hostname||document.location.host);
-	
+
 	$(document).delegate('a[href^="/"],a[href^="'+siteUrl+'"]', "click tap", function(e) {
 		e.preventDefault();
 		History.pushState({}, "", this.pathname);
@@ -80,11 +82,11 @@ $(document).ready(function() {
 			setTimeout(function() {
 				$('#content').html($(data).find('#content').children());
 				reveal();
-				pin();			
+				pin();
 			}, 500);
 		});
 	});
-	
+
 	if ('ontouchstart' in document) {
 	    $('body').removeClass('no-touch');
 	}
