@@ -155,11 +155,13 @@ h2 {
 	margin-bottom: 8px;
 }
 
-/*
 h2.project-title {
-	margin-bottom: 0;
+	margin-bottom: 4px;
 }
-*/
+
+.byline {
+	margin-bottom: 8px;
+}
 
 ul.tags {
 	margin-bottom: 8px;
