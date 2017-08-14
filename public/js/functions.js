@@ -1,6 +1,6 @@
 function randomize() {
 	items = [
-	    { image : 'fromme/tom-chung-fromme-06.jpg', link : 'fromme-chair' },
+	    { image : 'fromme/tom-chung-fromme-04.jpg', link : 'fromme-chair' },
 	    { image : 'high-beam/tom-chung-high-beam-04.jpg', link : 'high-beam' },
 	    { image : 'cast-pendants/tom-chung-cast-pendants-02.jpg', link : 'cast-pendants' },
 	    { image : 'scaffold/tom-chung-scaffold-05.jpg', link : 'scaffold' }
