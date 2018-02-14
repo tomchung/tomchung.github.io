@@ -1,61 +1,99 @@
-function randomize() {
-	items = [
-	    { image : 'fromme/tom-chung-fromme-04.jpg', link : 'fromme-chair' },
-	    { image : 'high-beam/tom-chung-high-beam-04.jpg', link : 'high-beam' },
-	    { image : 'cast-pendants/tom-chung-cast-pendants-02.jpg', link : 'cast-pendants' },
-	    { image : 'scaffold/tom-chung-scaffold-05.jpg', link : 'scaffold' }
-	];
-	var item = items[Math.floor(Math.random()*items.length)];
-	$('.cover-image').css({ 'background-image' : 'url("public/images/' + item.image + '")'});
-	$('.hero-link').attr({'href' : '/projects/' + item.link });
-}
-
 function reveal() {
 	window.scrollTo(0, 0);
-
-	randomize();
 
 	$(".gallery").imagesLoaded().progress(function(t, n) {
         $(n.img).css({ 'opacity' : 1 })
     });
 
-	$('.cover-image').imagesLoaded({ background: true }, function() {
-		$('.cover-image').css({ 'opacity' : 1 });
-	});
-
 	setTimeout(function() {
-		$('#content').css({ 'opacity' : 1 });
+		document.getElementById("content").style.opacity = 1;
 	}, 50);
+
+	rotateImages(500);
 }
 
 function showVideo(e) {
 	e = e || window.event;
     var target = e.target || e.srcElement;
-	$(target).css({ 'opacity' : 1 });
+    target.style.opacity = 1;
 }
 
 function hide() {
-	$('#content').css({ 'opacity' : 0 });
+	document.getElementById("content").style.opacity = 0;
 }
 
 function pin() {
-	var stickyColumn   = $('.sticky-column'),
-		contentHeight  = stickyColumn.outerHeight(),
-		windowHeight   = $(window).height(),
-		windowWidth    = $(window).width(),
-		scrollPosition = $(window).scrollTop();
+	var stickyColumn   = document.getElementById("sticky-column");
 
-	if ((contentHeight > windowHeight) && (windowWidth > 1020)) {
-		stickyColumn.css({ 'top' : -(contentHeight - windowHeight) });
-	} else {
-		stickyColumn.css({ 'top' : '' });
-	}
+	if (stickyColumn) {
+		var contentHeight  = stickyColumn.clientHeight,
+			windowHeight   = document.documentElement.clientHeight,
+			windowWidth    = document.documentElement.clientWidth,
+			scrollPosition = document.body.scrollTop;
 
-	if (scrollPosition > (contentHeight - windowHeight)) {
-		stickyColumn.addClass('pinned');
-	} else {
-		stickyColumn.removeClass('pinned');
+		if ((contentHeight > windowHeight) && (windowWidth > 1020)) {
+			stickyColumn.style.top = -(contentHeight - windowHeight) + "px";
+		} else {
+			stickyColumn.style.top = "";
+		}
+
+		if (scrollPosition > (contentHeight - windowHeight)) {
+			stickyColumn.classList.add('pinned');
+		} else {
+			stickyColumn.classList.remove('pinned');
+		}
 	}
+}
+
+function getPosition(element) {
+    var yPosition = 0;
+
+    while(element) {
+        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+        element = element.offsetParent;
+    }
+
+    return yPosition;
+}
+
+function rotateImages(speed) {
+	var homepageGallery = document.getElementById("image-rotation");
+
+	if (homepageGallery) {
+		var images = homepageGallery.querySelectorAll(".slide"),
+			currentIndex = 0;
+			
+		setInterval(function() {
+			if (currentIndex == images.length - 1) {
+				currentIndex = 0;
+			} else {
+				currentIndex++;
+			}
+
+			Object.values(images).forEach(function(element, index) {
+				if (index == currentIndex) {
+					element.style.opacity = 1;
+				} else {
+					element.style.opacity = 0;
+				}
+			});
+		}, speed);
+	}
+}
+
+function scrollToTop(scrollDuration) {
+    var cosParameter = window.scrollY / 2,
+        scrollCount = 0,
+        oldTimestamp = performance.now();
+    function step (newTimestamp) {
+        scrollCount += Math.PI / (scrollDuration / (newTimestamp - oldTimestamp));
+        if (scrollCount >= Math.PI) window.scrollTo(0, 0);
+        if (window.scrollY === 0) return;
+        window.scrollTo(0, Math.round(cosParameter + cosParameter * Math.cos(scrollCount)));
+        oldTimestamp = newTimestamp;
+        window.requestAnimationFrame(step);
+    }
+    window.requestAnimationFrame(step);
 }
 
 $(document).ready(function() {
@@ -71,8 +109,13 @@ $(document).ready(function() {
 
 	$(document).delegate('a[href^="/"],a[href^="'+siteUrl+'"]', "click tap", function(e) {
 		e.preventDefault();
-		History.pushState({}, "", this.pathname);
-		hide();
+		var currentLocation = document.location.pathname + decodeURIComponent(document.location.search);
+		if (currentLocation == this.pathname) {
+			scrollToTop(800);
+		} else {
+			History.pushState({}, "", this.pathname);
+			hide();
+		}
 	});
 
 	History.Adapter.bind(window, 'statechange', function() {
