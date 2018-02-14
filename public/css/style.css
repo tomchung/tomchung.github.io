@@ -44,12 +44,12 @@ a {
 	border-bottom: 0.065em solid transparent;
 }
 
-.left-column a:active {
-	opacity: .3;
-}
-
 .no-touch a:hover {
 	border-bottom: 0.065em solid;
+}
+
+a:active {
+	opacity: .3;
 }
 
 .no-touch a:active {
