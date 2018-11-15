@@ -62,7 +62,7 @@ function rotateImages(speed) {
 	if (homepageGallery) {
 		var images = homepageGallery.querySelectorAll(".slide"),
 			currentIndex = 0;
-			
+
 		setInterval(function() {
 			if (currentIndex == images.length - 1) {
 				currentIndex = 0;

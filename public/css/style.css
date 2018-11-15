@@ -25,7 +25,7 @@
 	--padding: 48px;
 	--small-padding: 9px;
 }
-	
+
 body {
 	font-family: 'Graphik Web', sans-serif;
 	color: #111;
@@ -44,7 +44,8 @@ a {
 	border-bottom: 0.065em solid transparent;
 }
 
-.no-touch a:hover {
+.no-touch a:hover,
+.post-content a {
 	border-bottom: 0.065em solid;
 }
 
@@ -70,7 +71,8 @@ a:active {
 	position: relative;
 }
 
-.project::after {
+.project::after,
+#about::after {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -129,40 +131,36 @@ a:active {
 }
 
 
-#about {
-	margin-bottom: var(--padding);
-}
-
-.about-image {
-	pointer-events: none;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-}
-
-.about-image img {
-	height: 100%;
-	width: auto;
-	visibility: hidden;
-}
-
-.about-image .slide {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-position: right;
-	background-size: contain;
-	background-repeat: no-repeat;
-	opacity: 0;
-}
-
-.about-text {
-	width: 40%;
+#about,
+#updates {
 	display: flex;
 	flex-direction: column;
+	padding: var(--padding);
+}
+
+.about-section {
+	display: flex;
+	flex-direction: row;
+}
+
+.about-section:not(:last-child) {
+	padding-bottom: calc(var(--type-size) * var(--line-height));
+}
+
+.post:not(:last-child) {
+	padding-bottom: calc(var(--type-size) * var(--line-height));
+}
+
+.label {
+	flex: 1;
+}
+
+.field {
+	flex: 2;
+}
+
+.spacer {
+	width: 2.75em;
 }
 
 nav {
@@ -361,6 +359,18 @@ p.projects span:last-child::after {
 }
 
 @media only screen and (max-width: 720px) {
+	.about-section {
+		flex-direction: column;
+	}
+
+	.label {
+		margin-bottom: calc((var(--type-size) * var(--line-height)) / 2);
+	}
+
+	.spacer {
+		display: none;
+	}
+
 	.list-project:nth-child(3),
 	.list-project:nth-child(2) {
 		display: none;
