@@ -329,27 +329,16 @@ p.projects span:last-child::after {
 		width: 100%;
 	}
 
-	.right-column.about-image {
-		padding-bottom: 0;
+	.about-section {
+		flex-direction: column;
 	}
 
-	.about-image {
-		pointer-events: none;
-		position: relative;
-		width: 100%;
-		padding-bottom: 66%;
-		top: auto;
-		bottom: auto;
-		right: auto;
+	.label {
 		margin-bottom: calc(var(--type-size) * var(--line-height));
 	}
 
-	.about-image img {
+	.spacer {
 		display: none;
-	}
-
-	.about-image .slide {
-		background-position: center;
 	}
 
 	.about-text {
@@ -359,18 +348,6 @@ p.projects span:last-child::after {
 }
 
 @media only screen and (max-width: 720px) {
-	.about-section {
-		flex-direction: column;
-	}
-
-	.label {
-		margin-bottom: calc((var(--type-size) * var(--line-height)) / 2);
-	}
-
-	.spacer {
-		display: none;
-	}
-
 	.list-project:nth-child(3),
 	.list-project:nth-child(2) {
 		display: none;
@@ -378,12 +355,6 @@ p.projects span:last-child::after {
 }
 
 @media only screen and (max-width: 540px) {
-	/*:root {
-		--type-size: 3.7vw;
-		--padding: 8.8vw;
-		--small-padding: 1.6vw;
-	}*/
-
 	:root {
 		--type-size: 4vw;
 		--padding: 6vw;
