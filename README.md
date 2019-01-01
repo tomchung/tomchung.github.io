@@ -4,7 +4,7 @@ Open the github app and sync both the `tomchung.github.io` and `tomchung.net` pr
 ### 2. Run the website locally
 Open terminal.app and type the following two commands:
 
-`cd ~/Documents/Website/tomchung.github.io-source`
+`cd ~/Documents/Github/tomchung.github.io-source`
 
 `jekyll serve --skip-initial-build --watch`
 
