@@ -53,13 +53,16 @@ a:active {
 	opacity: .3;
 }
 
-.no-touch a:active,
-a.usdz:active {
+.no-touch a:active {
 	opacity: 1;
 }
 
 a.usdz {
 	pointer-events: none;
+}
+
+a.usdz:active {
+	opacity: 0.7;
 }
 
 #content {
