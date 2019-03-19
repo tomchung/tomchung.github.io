@@ -53,7 +53,8 @@ a:active {
 	opacity: .3;
 }
 
-.no-touch a:active {
+.no-touch a:active,
+a.usdz:active {
 	opacity: 1;
 }
 
