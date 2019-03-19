@@ -57,6 +57,10 @@ a:active {
 	opacity: 1;
 }
 
+a.usdz {
+	pointer-events: none;
+}
+
 #content {
 	background-color: white;
 	position: relative;

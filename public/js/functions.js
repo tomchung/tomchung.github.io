@@ -10,6 +10,14 @@ function reveal() {
 	}, 50);
 
 	rotateImages(500);
+
+	var a = document.createElement("a");
+	if (a.relList.supports("ar")) {
+		var links = document.querySelectorAll('.usdz');
+		links.forEach((link) => {
+			link.style.pointerEvents = "all";
+		});
+	}
 }
 
 function showVideo(e) {
@@ -107,7 +115,7 @@ $(document).ready(function() {
 
 	var siteUrl = 'http://'+(document.location.hostname||document.location.host);
 
-	$(document).delegate('a[href^="/"],a[href^="'+siteUrl+'"]', "click tap", function(e) {
+	$(document).delegate('a[href^="/"]:not(.usdz),a[href^="'+siteUrl+'"]:not(.usdz)', "click tap", function(e) {
 		e.preventDefault();
 		var currentLocation = document.location.pathname + decodeURIComponent(document.location.search);
 		if (currentLocation == this.pathname) {
